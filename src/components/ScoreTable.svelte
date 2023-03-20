@@ -35,7 +35,7 @@ console.log(data)
         padding-bottom: 5px;
     }
     .wrap {
-        width: 85%;
+        width: 100%;
         display: flex;
         justify-content: center;
         margin: 10px 0 0 0;

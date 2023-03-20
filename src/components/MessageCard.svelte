@@ -5,7 +5,7 @@
 
 <style>
     .messCard {
-        width: 65%;
+        width: 55%;
         border: 1px solid black;
         padding: 0 5px 0 5px;
         border-radius: 15px;
@@ -17,7 +17,7 @@
         background-color: aqua;
     }
     .wrap {
-        width: 85%;
+        width: 100%;
         display: flex;
         justify-content: center;
         margin: 10px 0 0 0;

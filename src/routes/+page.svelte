@@ -46,14 +46,29 @@
   };
 </script>
 
-<h1>Welcome to Nelson's Score Site</h1>
-<h3>Last Recorded Scores</h3>
-{#await getScores() then data}
-  <ScoreTable scores={data} />
-{/await}
-<h3>Message Section</h3>
-{#await getMessages() then messages}
-  {#each messages as mes}
-    <MessageCard message = {mes.body} time={mes.time} />
-  {/each}
-{/await}
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h3 {
+        margin-bottom: 20px;
+        border-bottom: 1px solid black;
+        width: fit-content;
+    }
+</style>
+
+<body>
+    <h1>Welcome to Nelson's Score Site</h1>
+    <h3>Last Recorded Scores</h3>
+    {#await getScores() then data}
+      <ScoreTable scores={data} />
+    {/await}
+    <h3>Message Section</h3>
+    {#await getMessages() then messages}
+      {#each messages as mes}
+        <MessageCard message = {mes.body} time={mes.time} />
+      {/each}
+    {/await}
+</body>
