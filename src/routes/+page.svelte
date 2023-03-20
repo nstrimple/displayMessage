@@ -1,7 +1,8 @@
 <script>
   import moment from "moment";
-
   import ScoreTable from "../components/ScoreTable.svelte";
+  import MessageCard from "../components/MessageCard.svelte";
+
   export const getScores = async () => {
     const date = moment();
     const today = date.format("YYYY-MM-DD");
@@ -53,7 +54,6 @@
 <h3>Message Section</h3>
 {#await getMessages() then messages}
   {#each messages as mes}
-    <p>{mes.body}</p>
-    <p>{`sent at: ${mes.time}`}</p>
+    <MessageCard message = {mes.body} time={mes.time} />
   {/each}
 {/await}

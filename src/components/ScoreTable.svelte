@@ -34,25 +34,33 @@ console.log(data)
     th {
         padding-bottom: 5px;
     }
+    .wrap {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 0 0;
+    }
 </style>
 
-<table>
-    <tr>
-        <th>
-            Home Team
-        </th>
-        <th>
-            Away Team
-        </th>
-        <th>
-            Status
-        </th>
-    </tr>
-    {#each data as game}
-    <tr>
-        <td>{`${game.team1}: ${game.team1Score}`}</td>
-        <td>{`${game.team2}: ${game.team2Score}`}</td>
-        <td>{game.status}</td>
-    </tr>
-    {/each}
-</table>
+<div class="wrap">
+    <table>
+        <tr>
+            <th>
+                Home Team
+            </th>
+            <th>
+                Away Team
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+        {#each data as game}
+        <tr>
+            <td>{`${game.team1}: ${game.team1Score}`}</td>
+            <td>{`${game.team2}: ${game.team2Score}`}</td>
+            <td>{game.status}</td>
+        </tr>
+        {/each}
+    </table>
+</div>
