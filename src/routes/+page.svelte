@@ -1,5 +1,7 @@
 <script>
   import moment from "moment";
+
+  import ScoreTable from "../components/ScoreTable.svelte";
   export const getScores = async () => {
     const date = moment();
     const today = date.format("YYYY-MM-DD");
@@ -44,11 +46,9 @@
 </script>
 
 <h1>Welcome to Nelson's Score Site</h1>
-<h3>Score Section</h3>
+<h3>Last Recorded Scores</h3>
 {#await getScores() then data}
-  {#each data as score}
-    <p>{score}</p>
-  {/each}
+  <ScoreTable scores={data} />
 {/await}
 <h3>Message Section</h3>
 {#await getMessages() then messages}
