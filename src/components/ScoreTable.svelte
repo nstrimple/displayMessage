@@ -19,21 +19,20 @@ console.log(data)
 </script>
 
 <style>
-    td, th {
-        border-bottom: 1px black solid;
-        padding: 0 20px 0 20px;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    tr:hover {
-        background-color:cyan;
-    }
     table {
-        border-collapse: collapse;
-    }
-    th {
-        padding-bottom: 5px;
-    }
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
     .wrap {
         width: 100%;
         display: flex;

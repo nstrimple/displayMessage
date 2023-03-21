@@ -4,15 +4,16 @@
 </script>
 
 <style>
-    .messCard {
+    .message-card {
         width: 55%;
         border: 1px solid black;
         padding: 0 5px 0 5px;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
-    .messCard:hover {
+    .message-card:hover {
         scale: 1.15;
         background-color: aqua;
     }
@@ -30,7 +31,7 @@
 
 {#if message !== 'No games have started yet or nothing has changed'}
     <div class="wrap">
-        <div class='messCard'>
+        <div class='message-card'>
             <p>
                 {message}
             </p>
